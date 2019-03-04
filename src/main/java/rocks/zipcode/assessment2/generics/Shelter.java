@@ -8,7 +8,7 @@ package rocks.zipcode.assessment2.generics;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<_> {
+public class Shelter<T> {
     public Shelter() {
         throw new NullPointerException();
     }
