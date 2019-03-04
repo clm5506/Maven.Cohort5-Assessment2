@@ -37,17 +37,16 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-     String ans = string.replaceAll(charactersToRemove,"");
-       ans = string.replaceAll(reverse(charactersToRemove),"");
 
-        //String[] stringArray = charactersToRemove.split("");
-//        String ans = "";
-//        for(int i = 0; i < stringArray.length; i++){
-//           string.replaceAll(stringArray[i],"");
-//       }
+        String answer = "";
+        String[] charsToBeRemoved = charactersToRemove.split("");
 
+        for(String str : charsToBeRemoved){
+           string = string.replaceAll(str,"");
 
-        return ans;
+        }
+        return string;
+
     }
 
     /**
