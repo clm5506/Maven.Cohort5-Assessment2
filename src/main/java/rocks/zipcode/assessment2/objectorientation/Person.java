@@ -1,5 +1,7 @@
 package rocks.zipcode.assessment2.objectorientation;
 
+import java.util.Objects;
+
 /**
  * @author leon on 28/11/2018.
  * @ATTENTION_TO_STUDENTS - Ensure that you have completed the `Address` class before attempting this class
@@ -53,7 +55,10 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         Person comparisonPerson = (Person) o;
-        if(comparisonPerson.name.equals(this.name)){
+//        if(comparisonPerson.getName().equals(this.name)){
+//            return true;
+//        } else
+        if(Objects.equals(comparisonPerson.getName(),this.name)){
             return true;
         }
         return false;

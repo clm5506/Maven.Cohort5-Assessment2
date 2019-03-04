@@ -72,7 +72,7 @@ public class Address {
     @Override
     public boolean equals(Object o) {
         Address address = (Address) o;
-        if(address.zipcode.equals(this.zipcode)){
+        if(address.getZipcode().equals(this.zipcode)){
             return true;
         }
         return false;

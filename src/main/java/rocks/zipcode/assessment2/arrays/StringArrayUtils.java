@@ -18,14 +18,11 @@ public class StringArrayUtils {
 
         List<String> ar = new ArrayList<String>(Arrays.asList(arrayToBeSpliced));
 
-        //if(startingIndex >= 0 && endingIndex >= 0) {
-//          try {
-              ar = ar.subList(startingIndex, endingIndex);
-//          } catch(IndexOutOfBoundsException e) {
-//              throw new IllegalArgumentException();
-//            }
+        if(startingIndex < 0){
+            throw new IllegalArgumentException();
+        }
+        ar = ar.subList(startingIndex, endingIndex);
 
-        //}
         String[] ans = ar.toArray(new String[ar.size()]);
         return ans;
     }
